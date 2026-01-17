@@ -4,7 +4,7 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
-    const root_module = b.createModule(.{
+    const root_module = b.addModule("anne_x11", .{
         .root_source_file = b.path("src/root.zig"),
         .target = target,
         .optimize = optimize,
